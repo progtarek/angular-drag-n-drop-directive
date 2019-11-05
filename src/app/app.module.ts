@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { DndDirective } from './direcitves/dnd.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DndDirective
   ],
   imports: [
     BrowserModule
