@@ -6,6 +6,7 @@ import { Component, ViewChild, ElementRef } from "@angular/core";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
+  @ViewChild("fileDropRef", { static: false }) fileDropEl: ElementRef;
   files: any[] = [];
 
   /**
@@ -63,6 +64,7 @@ export class AppComponent {
       item.progress = 0;
       this.files.push(item);
     }
+    this.fileDropEl.nativeElement.value = "";
     this.uploadFilesSimulator(0);
   }
 
