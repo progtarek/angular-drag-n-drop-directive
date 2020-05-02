@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ViewChild, ElementRef } from "@angular/core";
 
 @Component({
   selector: "app-root",
@@ -27,6 +27,10 @@ export class AppComponent {
    * @param index (File index)
    */
   deleteFile(index: number) {
+    if (this.files[index].progress < 100) {
+      console.log("Upload in progress.");
+      return;
+    }
     this.files.splice(index, 1);
   }
 
