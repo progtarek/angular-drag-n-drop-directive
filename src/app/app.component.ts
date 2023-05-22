@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "app-root",
@@ -19,8 +19,8 @@ export class AppComponent {
   /**
    * handle file from browsing
    */
-  fileBrowseHandler(files) {
-    this.prepareFilesList(files);
+  fileBrowseHandler($event) {
+    this.prepareFilesList($event.target.files);
   }
 
   /**
