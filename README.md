@@ -1,6 +1,6 @@
 # Dnd
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.13.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.13 and up date to 17.0.0
 
 ## Development server
 
