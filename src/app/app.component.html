@@ -1,5 +1,5 @@
 <div class="container" appDnd (fileDropped)="onFileDropped($event)">
-  <input type="file" #fileDropRef id="fileDropRef" multiple (change)="fileBrowseHandler($event.target.files)" />
+  <input type="file" #fileDropRef id="fileDropRef" multiple (change)="fileBrowseHandler($event)" />
   <img src="assets/img/dnd/ic-upload-file.svg" alt="">
   <h3>Drag and drop file here</h3>
   <h3>or</h3>

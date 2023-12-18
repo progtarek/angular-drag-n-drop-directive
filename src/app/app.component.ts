@@ -6,21 +6,21 @@ import { Component, ViewChild, ElementRef } from "@angular/core";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  @ViewChild("fileDropRef", { static: false }) fileDropEl: ElementRef;
+  @ViewChild("fileDropRef", { static: false }) fileDropEl: ElementRef = new ElementRef({});
   files: any[] = [];
 
   /**
    * on file drop handler
    */
-  onFileDropped($event) {
+  onFileDropped($event: any) {
     this.prepareFilesList($event);
   }
 
   /**
    * handle file from browsing
    */
-  fileBrowseHandler(files) {
-    this.prepareFilesList(files);
+  fileBrowseHandler($event: any) {
+    this.prepareFilesList($event.target.files);
   }
 
   /**
@@ -73,7 +73,7 @@ export class AppComponent {
    * @param bytes (File size in bytes)
    * @param decimals (Decimals point)
    */
-  formatBytes(bytes, decimals = 2) {
+  formatBytes(bytes : any, decimals = 2) {
     if (bytes === 0) {
       return "0 Bytes";
     }
